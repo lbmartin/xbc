@@ -20,15 +20,23 @@ const handleSubmit = (ev) => {
     formHolders = ['Person Name: ','Hair Color: ','Age: ','Birthplace: ']
     formVars = [personName,hairColor,age,birthplace]
 
-   const ul = document.createElement('ul')
+    const ul = document.createElement('ul')
 
+    var inputs = document.getElementsByClassName('inputs');
+    for(i =0; i < inputs.length; i++) 
+    {
+     const li = document.createElement('li')
+     li.textContent = formHolders[i] + formVars[i]
+     details.appendChild(li)
+    }
+  
+/*
    for(var i = 0; i < 4; i++){
      const li = document.createElement('li')
      li.textContent = formHolders[i] + formVars[i]
      details.appendChild(li)
    }
-  
-
+*/
 
 
 //    const nameHolder = document.createElement('nameHolder')
