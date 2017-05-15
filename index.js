@@ -17,11 +17,37 @@ const handleSubmit = (ev) => {
 
 //   details.innerHTML = `<em>${personName}</em>`
 
-//   const em = document.createElement('em')
-//   em.textContent = 'Person Name: ' + personName
-//   details.appendChild(em)
+    formHolders = ['Person Name: ','Hair Color: ','Age: ','Birthplace: ']
+    formVars = [personName,hairColor,age,birthplace]
+
+   const ul = document.createElement('ul')
+
+   for(var i = 0; i < 4; i++){
+     const li = document.createElement('li')
+     li.textContent = formHolders[i] + formVars[i]
+     details.appendChild(li)
+   }
+  
 
 
+
+//    const nameHolder = document.createElement('nameHolder')
+//    nameHolder.textContent = 'Person Name: ' + personName
+//    details.appendChild(nameHolder)
+
+//    const hairHolder = document.createElement('hairHolder')
+//    hairHolder.textContent = 'Hair Color: ' + hairColor
+//    details.appendChild(hairHolder)
+
+//    const ageHolder = document.createElement('ageHolder')
+//    ageHolder.textContent = 'Age: ' + age
+//    details.appendChild(ageHolder)
+
+//    const birthplaceHolder = document.createElement('birthplaceHolder')
+//    birthplaceHolder.textContent = 'Birthplace: ' + birthplace
+//    details.appendChild(birthplaceHolder)
+
+/*
    details.innerHTML=`
    <ul>
     <li>Name: ${personName}</li>
@@ -30,7 +56,7 @@ const handleSubmit = (ev) => {
     <li>Birthplace: ${birthplace}</li>
    </ul>
    `
-
+*/
 }
 
 personForm.addEventListener('submit', handleSubmit)
