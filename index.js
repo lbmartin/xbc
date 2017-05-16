@@ -1,5 +1,12 @@
 const personForm = document.querySelector('form')
 
+const renderColor = (hairColor) => {
+  const colorDiv = `
+    <div style="height: 50px; width: 100px; background-color: ${hairColor}"></div>
+  `
+  return colorDiv
+}
+
 
 const handleSubmit = (ev) => {
   ev.preventDefault()
@@ -11,9 +18,7 @@ const handleSubmit = (ev) => {
   const age = form.age.value
   const birthplace = form.birthplace.value
 
-  const colorDiv = `
-    <div style="height: 50px; width: 100px; background-color: ${hairColor}"></div>
-  `
+  
 
 //   details.innerHTML = `<em>${personName}</em>`
 
@@ -59,7 +64,7 @@ const handleSubmit = (ev) => {
    details.innerHTML=`
    <ul>
     <li>Name: ${personName}</li>
-    <li>Hair Color: ${colorDiv}</li>
+    <li>Hair Color: ${rednerColor(hairColor)}</li>
     <li>Age: ${age}</li>
     <li>Birthplace: ${birthplace}</li>
    </ul>
